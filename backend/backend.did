@@ -1,0 +1,17 @@
+type Section = 
+ record {
+   content: text;
+   title: text;
+ };
+service : {
+  addEducation: (Section) -> ();
+  addExperience: (Section) -> ();
+  addProject: (Section) -> ();
+  addSkill: (text) -> ();
+  getAboutMe: () -> (text) query;
+  getEducation: () -> (vec Section) query;
+  getExperiences: () -> (vec Section) query;
+  getProjects: () -> (vec Section) query;
+  getSkills: () -> (vec text) query;
+  updateAboutMe: (text) -> ();
+}
